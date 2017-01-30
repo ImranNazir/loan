@@ -1,22 +1,27 @@
 <?php
 /**
- * Testimonial widget.
+ * Our Process widget.
  *
  * @package themetim
  */
 
-class Themetim_Testimonial_Widget extends SiteOrigin_Widget {
+class Themetim_Our_Process_Widget extends SiteOrigin_Widget {
 
 	function __construct() {
 
 		parent::__construct(
-			'themetim-testimonial-widget',
-			__( 'ThemeTim Testimonial Widget', 'themetim' ),
+			'themetim-our-process-widget',
+			__( 'ThemeTim Our Process Widget', 'themetim' ),
 			array(
-				'description' => __( 'Testimonial Widget', 'themetim' ),
+				'description' => __( 'Our Process', 'themetim' ),
 			),
 			array(),
+
 			array(
+				'title' => array(
+					'type'  => 'text',
+					'label' => __( 'Title', 'themetim' ),
+				),
 				'heading_alignment' => array(
 					'type' => 'select',
 					'label' => __( 'Text Alignment', 'themetim' ),
@@ -27,30 +32,25 @@ class Themetim_Testimonial_Widget extends SiteOrigin_Widget {
 						'text-right' => __( 'Text Right', 'themetim' ),
 					)
 				),
-				'title' => array(
-					'type'  => 'text',
-					'label' => __( 'Title', 'themetim' ),
-				),
-
-				'testimonial' => array(
+				'process' => array(
 					'type'       => 'repeater',
-					'label'      => __( 'Testimonial', 'themetim' ),
+					'label'      => __( 'Our Process', 'themetim' ),
 					'item_name'  => __( 'Item', 'themetim' ),
 					'item_label' => array(
-						'selector'     => "[id*='prefix-themetim-testimonial-']",
+						'selector'     => "[id*='prefix-themetim-our-process-']",
 						'update_event' => 'change',
 						'value_method' => 'val',
 					),
 					'fields' => array(
-						'testimonial_name' => array(
+						'process_title' => array(
 							'type'  => 'text',
-							'label' => __( 'Name', 'themetim' ),
+							'label' => __( 'Title', 'themetim' ),
 						),
-						'testimonial_texteditor' => array(
+						'texteditor' => array(
 							'type' => 'tinymce',
-							'label' => __( '', 'widget-form-fields-text-domain' ),
+							'label' => __( '', 'themetim' ),
 							'default' => '',
-							'rows' => 10,
+							'rows' => 7,
 							'default_editor' => 'html',
 							'button_filters' => array(
 								'mce_buttons' => array( $this, 'filter_mce_buttons' ),
@@ -60,15 +60,10 @@ class Themetim_Testimonial_Widget extends SiteOrigin_Widget {
 								'quicktags_settings' => array( $this, 'filter_quicktags_settings' ),
 							),
 						),
-						'testimonial_profile_picture' => array(
-							'type'     => 'media',
-							'library'  => 'image',
-							'label'    => __( 'Image', 'themetim' ),
-							'fallback' => true,
-						),
 					),
 				),
 			)
+
 		);
 	}
 
@@ -77,4 +72,4 @@ class Themetim_Testimonial_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'themetim-testimonial-widget', __FILE__, 'Themetim_Testimonial_Widget' );
+siteorigin_widget_register( 'themetim-our-process-widget', __FILE__, 'Themetim_Our_Process_Widget' );

@@ -1,10 +1,6 @@
 <?php
 
 /********************************************************
- * ThemeTim Social
- ********************************************************/
-
-/********************************************************
  * Header
  ********************************************************/
 /**
@@ -12,7 +8,7 @@
  */
 function header_social() {
 
-    if(get_theme_mod('social_header_enable')) :
+    if(get_theme_mod('social_header_enable', '1')) :
         ?>
         <ul class="list-inline header-social">
             <?php
@@ -47,23 +43,19 @@ function header_social() {
 }
 add_action( 'themetim_header_social', 'header_social' );
 /**
- * Header My Account
+ * Header Info
  */
 function header_account(){
     if(get_theme_mod('top_header_tel_enable', '1')):
-        echo '<li><i class="fa fa-phone"></i> '.get_theme_mod('top_header_tel', '880 0000 000000').'</li>';
+        echo '<li><i class="fa fa-phone"></i> '.get_theme_mod('top_header_tel', '+88 987 4050').'</li>';
     endif;
-    if(get_theme_mod('top_header_account_enable', '1')){
-        $login_register =  get_permalink(get_theme_mod('header_login_register'));
-        $header_myaccount =  get_permalink(get_theme_mod('header_myaccount'));
-        if(is_user_logged_in()){
-            echo '<li><a href="'.$header_myaccount.'">'.get_theme_mod('top_header_account','Account').'</a></li><li><a href="'.wp_logout_url().'">Logout</a></li>';
-        }else{
-            echo '<li><a href="'.$login_register.'">Login</a></li><li><a href="'.$login_register.'">Register</a></li>';
-        }
-    }
+    if(get_theme_mod('top_header_email_enable', '1')):
+        echo '<li><i class="fa fa-envelope"></i> '.get_theme_mod('top_header_email', 'info@youremail.com').'</li>';
+    endif;
+
 }
 add_action( 'themetim_header_account', 'header_account' );
+
 /********************************************************
  * Footer
  ********************************************************/
@@ -109,15 +101,16 @@ add_action( 'themetim_footer_social', 'footer_social' );
  * Footer Newsletter
  */
 function footer_newsletter(){
+    if(get_theme_mod('newsletter_footer_enable','1')){
     ?>
-    <form class="form-inline margin-top-xs-20" action="#" method="post" target="_blank">
+    <form class="form-inline margin-top-xs-20" action="<?php echo get_theme_mod('top_footer_newsletter_url','https://www.yourmailchimpurl.com'); ?>" method="post" target="_blank">
         <div class="form-group">
-            <h3 class="margin-clear padding-clear pull-left">Newsletter</h3>
+            <h3 class="margin-clear padding-clear pull-left"><?php echo get_theme_mod('top_footer_newsletter_title','Newsletter'); ?></h3>
             <input type="email" class="form-control" name="newsletter-email" id="newsletter-email" placeholder="info@yoursite.com" required="">
             <button type="submit" class="btn btn-primary">Subscribe</button>
         </div>
     </form>
-    <?php
+    <?php }
 }
 add_action( 'themetim_footer_newsletter', 'footer_newsletter' );
 

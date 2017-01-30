@@ -17,21 +17,21 @@ function themetim_typography_color($color) {
     /*
      * General Section
      */
-    $body_text_color = get_theme_mod( 'bg_text_color', '#000' );
+    $body_text_color = get_theme_mod( 'bg_text_color', '#7d7d7d' );
     $body_font_size = get_theme_mod( 'body_font_size', '14' );
-    $body_font_family = get_theme_mod( 'body_font_family', 'Open Sans' );
+    $body_font_family = get_theme_mod( 'body_font_family', 'Poppins' );
 
     $color .= "body { color:" . esc_attr($body_text_color) . "; font-size: " . esc_attr($body_font_size) . "px; font-family: ". esc_attr(str_replace('+', ' ', $body_font_family)) ."} ";
 
-    $heading_color = get_theme_mod( 'heading_color', '#000' );
-    $heading_font_family = get_theme_mod( 'heading_font_family', 'Open Sans' );
+    $heading_color = get_theme_mod( 'heading_color', '#373c5f' );
+    $heading_font_family = get_theme_mod( 'heading_font_family', 'Poppins' );
     $color .= "h1, h2, h3, h4, h5, h6 { color:" . esc_attr($heading_color) . ";font-family: ". esc_attr(str_replace('+', ' ', $heading_font_family)) ."} ";
 
     $link_color = get_theme_mod( 'link_color', '#000' );
     $color .= "a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a,.woocommerce div.product .product_title,.woocommerce div.product p.price, .woocommerce div.product span.price,.woocommerce div.product form.cart .variations td.label { color:" . esc_attr($link_color) . "} ";
 
-    $link_hover_color = get_theme_mod( 'link_hover_color', '#555' );
-    $color .= "a:hover,.header-bottom .navbar-default .active a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a:hover { color:" . esc_attr($link_hover_color) . "} ";
+    $link_hover_color = get_theme_mod( 'link_hover_color', '#b49132' );
+    $color .= ".search-fix .btn:hover,a:hover,.header-bottom .navbar-default .active a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a:hover { color:" . esc_attr($link_hover_color) . "} ";
 
     /*
      * Header Section
@@ -50,32 +50,32 @@ function themetim_typography_color($color) {
     /*
      * Default Button
      */
-    $btn_default_bg = get_theme_mod( 'btn_default_bg', '#fff' );
-    $btn_default_text = get_theme_mod( 'btn_default_text', '#000' );
-    $btn_default_border = get_theme_mod( 'btn_default_border', '#000' );
+    $btn_default_bg = get_theme_mod( 'btn_default_bg', '#b49132' );
+    $btn_default_text = get_theme_mod( 'btn_default_text', '#fff' );
+    $btn_default_border = get_theme_mod( 'btn_default_border', '#b49132' );
 
-    $color .= ".btn-default,.camera_wrap.main-slider .btn, .btn-default.disabled,.woocommerce ul.products li.product .button,.widget-area .search-form .search-submit,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span,.woocommerce div.product form.cart .button,.woocommerce #review_form #respond .form-submit input,.woocommerce input.button , .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce #payment #place_order ,.wpcf7-submit{ background-color:" . esc_attr($btn_default_bg) . "; color: " . esc_attr($btn_default_text) . ";border-color: " . esc_attr($btn_default_border) . "; } ";
+    $color .= ".camera_wrap .slider-button .btn-default,.btn-default,.camera_wrap.main-slider .btn, .btn-default.disabled,.woocommerce ul.products li.product .button,.widget-area .search-form .search-submit,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,.woocommerce nav.woocommerce-pagination ul li a, .woocommerce nav.woocommerce-pagination ul li span,.woocommerce div.product form.cart .button,.woocommerce #review_form #respond .form-submit input,.woocommerce input.button , .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce #payment #place_order ,.wpcf7-submit{ background-color:" . esc_attr($btn_default_bg) . "; color: " . esc_attr($btn_default_text) . ";border-color: " . esc_attr($btn_default_border) . "; } ";
 
-    $btn_default_bg_hover = get_theme_mod( 'btn_default_bg_hover', '#000' );
+    $btn_default_bg_hover = get_theme_mod( 'btn_default_bg_hover', '#373c5f' );
     $btn_default_text_hover = get_theme_mod( 'btn_default_text_hover', '#fff' );
-    $btn_default_border_hover = get_theme_mod( 'btn_default_border_hover', '#000' );
+    $btn_default_border_hover = get_theme_mod( 'btn_default_border_hover', '#373c5f' );
 
-    $color .= ".btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default,.woocommerce ul.products li.product .button:hover,.widget-area .search-form .search-submit:hover,.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current,.woocommerce div.product form.cart .button:hover ,.woocommerce #review_form #respond .form-submit input:hover,.woocommerce input.button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce #payment #place_order:hover,.wpcf7-submit:hover,.camera_wrap.main-slider .btn:hover{ background-color:" . esc_attr($btn_default_bg_hover) . "; color: " . esc_attr($btn_default_text_hover) . ";border-color: " . esc_attr($btn_default_border_hover) . "; } ";
+    $color .= ".camera_wrap .slider-button .btn-default:hover,.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default,.woocommerce ul.products li.product .button:hover,.widget-area .search-form .search-submit:hover,.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,.woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current,.woocommerce div.product form.cart .button:hover ,.woocommerce #review_form #respond .form-submit input:hover,.woocommerce input.button:hover, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover, .woocommerce #payment #place_order:hover,.wpcf7-submit:hover,.camera_wrap.main-slider .btn:hover{ background-color:" . esc_attr($btn_default_bg_hover) . "; color: " . esc_attr($btn_default_text_hover) . ";border-color: " . esc_attr($btn_default_border_hover) . "; } ";
 
     /*
      * Primary Button
      */
-    $btn_primary_bg = get_theme_mod( 'btn_primary_bg', '#000' );
+    $btn_primary_bg = get_theme_mod( 'btn_primary_bg', '#373c5f' );
     $btn_primary_text = get_theme_mod( 'btn_primary_text', '#fff' );
-    $btn_primary_border = get_theme_mod( 'btn_primary_border', '#000' );
+    $btn_primary_border = get_theme_mod( 'btn_primary_border', '#373c5f' );
 
-    $color .= ".btn-primary, .btn-primary.disabled{ background-color:" . esc_attr($btn_primary_bg) . "; color: " . esc_attr($btn_primary_text) . ";border-color: " . esc_attr($btn_primary_border) . "; } ";
+    $color .= ".camera_wrap .slider-button .btn-primary,.btn-primary, .btn-primary.disabled{ background-color:" . esc_attr($btn_primary_bg) . "; color: " . esc_attr($btn_primary_text) . ";border-color: " . esc_attr($btn_primary_border) . "; } ";
 
-    $btn_primary_bg_hover = get_theme_mod( 'btn_primary_bg_hover', '#fff' );
-    $btn_primary_text_hover = get_theme_mod( 'btn_primary_text_hover', '#000' );
-    $btn_primary_border_hover = get_theme_mod( 'btn_primary_border_hover', '#fff' );
+    $btn_primary_bg_hover = get_theme_mod( 'btn_primary_bg_hover', '#b49132' );
+    $btn_primary_text_hover = get_theme_mod( 'btn_primary_text_hover', '#fff' );
+    $btn_primary_border_hover = get_theme_mod( 'btn_primary_border_hover', '#b49132' );
 
-    $color .= ".btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary{ background-color:" . esc_attr($btn_primary_bg_hover) . "; color: " . esc_attr($btn_primary_text_hover) . ";border-color: " . esc_attr($btn_primary_border_hover) . "; } ";
+    $color .= ".camera_wrap .slider-button .btn-primary:hover,.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary{ background-color:" . esc_attr($btn_primary_bg_hover) . "; color: " . esc_attr($btn_primary_text_hover) . ";border-color: " . esc_attr($btn_primary_border_hover) . "; } ";
 
     /*
      * Success Button
@@ -84,13 +84,13 @@ function themetim_typography_color($color) {
     $btn_success_text = get_theme_mod( 'btn_success_text', '#000' );
     $btn_success_border = get_theme_mod( 'btn_success_border', '#fff' );
 
-    $color .= ".btn-success,.btn-success.disabled{ background-color:" . esc_attr($btn_success_bg) . "; color: " . esc_attr($btn_success_text) . ";border-color: " . esc_attr($btn_success_border) . "; } ";
+    $color .= ".camera_wrap .slider-button .btn-success,.btn-success,.btn-success.disabled{ background-color:" . esc_attr($btn_success_bg) . "; color: " . esc_attr($btn_success_text) . ";border-color: " . esc_attr($btn_success_border) . "; } ";
 
     $btn_success_bg_hover = get_theme_mod( 'btn_success_bg_hover', '#000' );
     $btn_success_text_hover = get_theme_mod( 'btn_success_text_hover', '#fff' );
     $btn_success_border_hover = get_theme_mod( 'btn_success_border_hover', '#000' );
 
-    $color .= ".btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success{ background-color:" . esc_attr($btn_success_bg_hover) . "; color: " . esc_attr($btn_success_text_hover) . ";border-color: " . esc_attr($btn_success_border_hover) . "; } ";
+    $color .= ".camera_wrap .slider-button .btn-success:hover,.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success{ background-color:" . esc_attr($btn_success_bg_hover) . "; color: " . esc_attr($btn_success_text_hover) . ";border-color: " . esc_attr($btn_success_border_hover) . "; } ";
 
     /*
      * Extra Text Color

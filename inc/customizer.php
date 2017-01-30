@@ -14,7 +14,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->get_section( 'title_tagline' )->title = __('Header', 'text_domain');
+	$wp_customize->get_section( 'title_tagline' )->title = __('Header', 'themetim');
 	$wp_customize->remove_section( 'background_image' );
 
 	/**
@@ -73,7 +73,7 @@ function themetim_customize_register( $wp_customize ) {
 	 * Social Links
 	 *********************************************/
 	$wp_customize->add_section( 'social_settings', array(
-		'title' => __( 'Social Media', 'text_domain' ),
+		'title' => __( 'Social Media', 'themetim' ),
 		'description' => '',
 		'priority' => 60,
 	) );
@@ -97,7 +97,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://www.facebook.com/',
 	) );
 	$wp_customize->add_control( 'header_fb', array(
-		'label' => __( 'Facebook', 'text_domain' ),
+		'label' => __( 'Facebook', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_fb'
@@ -106,7 +106,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://twitter.com',
 	) );
 	$wp_customize->add_control( 'header_tw', array(
-		'label' => __( 'Twitter', 'text_domain' ),
+		'label' => __( 'Twitter', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_tw'
@@ -115,7 +115,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://linkedin.com',
 	) );
 	$wp_customize->add_control( 'header_li', array(
-		'label' => __( 'Linkedin', 'text_domain' ),
+		'label' => __( 'Linkedin', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_li'
@@ -124,7 +124,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://pinterest.com',
 	) );
 	$wp_customize->add_control( 'header_pint', array(
-		'label' => __( 'Pinterest', 'text_domain' ),
+		'label' => __( 'Pinterest', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_pint'
@@ -133,7 +133,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://instagram.com',
 	) );
 	$wp_customize->add_control( 'header_ins', array(
-		'label' => __( 'Instagram', 'text_domain' ),
+		'label' => __( 'Instagram', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_ins'
@@ -142,7 +142,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://dribbble.com',
 	) );
 	$wp_customize->add_control( 'header_dri', array(
-		'label' => __( 'Dribbble', 'text_domain' ),
+		'label' => __( 'Dribbble', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_dri'
@@ -151,7 +151,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://plus.google.com',
 	) );
 	$wp_customize->add_control( 'header_plus', array(
-		'label' => __( 'Plus Google', 'text_domain' ),
+		'label' => __( 'Plus Google', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_plus'
@@ -160,7 +160,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://youtube.com',
 	) );
 	$wp_customize->add_control( 'header_you', array(
-		'label' => __( 'YouTube', 'text_domain' ),
+		'label' => __( 'YouTube', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'header_you'
@@ -176,7 +176,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'footer_social', array(
-			'label' => __('Footer Social', 'text_domain'),
+			'label' => __('Footer Social', 'themetim'),
 			'section' => 'social_settings',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -186,7 +186,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'social_footer_enable', array(
-		'label' => __( 'Enable Footer Social', 'text_domain' ),
+		'label' => __( 'Enable Footer Social', 'themetim' ),
 		'type' => 'checkbox',
 		'section' => 'social_settings',
 		'settings' => 'social_footer_enable'
@@ -196,7 +196,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://www.facebook.com/',
 	) );
 	$wp_customize->add_control( 'footer_fb', array(
-		'label' => __( 'Facebook', 'text_domain' ),
+		'label' => __( 'Facebook', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_fb'
@@ -205,7 +205,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://twitter.com',
 	) );
 	$wp_customize->add_control( 'footer_tw', array(
-		'label' => __( 'Twitter', 'text_domain' ),
+		'label' => __( 'Twitter', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_tw'
@@ -214,7 +214,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://linkedin.com',
 	) );
 	$wp_customize->add_control( 'footer_li', array(
-		'label' => __( 'Linkedin', 'text_domain' ),
+		'label' => __( 'Linkedin', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_li'
@@ -223,7 +223,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://pinterest.com',
 	) );
 	$wp_customize->add_control( 'footer_pint', array(
-		'label' => __( 'Pinterest', 'text_domain' ),
+		'label' => __( 'Pinterest', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_pint'
@@ -232,7 +232,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://instagram.com',
 	) );
 	$wp_customize->add_control( 'footer_ins', array(
-		'label' => __( 'Instagram', 'text_domain' ),
+		'label' => __( 'Instagram', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_ins'
@@ -241,7 +241,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://dribbble.com',
 	) );
 	$wp_customize->add_control( 'footer_dri', array(
-		'label' => __( 'Dribbble', 'text_domain' ),
+		'label' => __( 'Dribbble', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_dri'
@@ -250,7 +250,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://plus.google.com',
 	) );
 	$wp_customize->add_control( 'footer_plus', array(
-		'label' => __( 'Plus Google', 'text_domain' ),
+		'label' => __( 'Plus Google', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_plus'
@@ -259,7 +259,7 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'https://youtube.com',
 	) );
 	$wp_customize->add_control( 'footer_you', array(
-		'label' => __( 'YouTube', 'text_domain' ),
+		'label' => __( 'YouTube', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
 		'settings' => 'footer_you'
@@ -296,7 +296,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'site_logo',
 			array(
-				'label'          => __( '', 'text_domain' ),
+				'label'          => __( '', 'themetim' ),
 				'type'           => 'image',
 				'section'        => 'title_tagline',
 			)
@@ -322,21 +322,20 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'social_header_enable', array(
-		'label' => __( 'Enable Header Social', 'text_domain' ),
+		'label' => __( 'Enable Header Social', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('## Please Go Back To Social Media Settings For Social Links ##', 'text_domain'),
+		'description'   => __('## Please Go Back To Social Media Settings For Social Links ##', 'themetim'),
 		'section' => 'title_tagline',
 		'settings' => 'social_header_enable'
 	) );
-
 
 	$wp_customize->add_setting( 'top_header_tel_enable', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'top_header_tel_enable', array(
-		'label' => __( 'Enable Tel', 'text_domain' ),
+		'label' => __( 'Enable Tel', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'title_tagline',
 		'settings' => 'top_header_tel_enable'
 	) );
@@ -345,99 +344,55 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '880 1916 404543',
 	) );
 	$wp_customize->add_control( 'top_header_tel', array(
-		'label' => __( 'Phone Number', 'text_domain' ),
+		'label' => __( 'Phone Number', 'themetim' ),
 		'type' => 'text',
 		'section' => 'title_tagline',
 		'settings' => 'top_header_tel'
 	) );
 
-	$wp_customize->add_setting( 'top_header_account_enable', array(
+	$wp_customize->add_setting( 'top_header_email_enable', array(
 		'default'           => '1',
 	) );
-	$wp_customize->add_control( 'top_header_account_enable', array(
-		'label' => __( 'Enable Login Register', 'text_domain' ),
+	$wp_customize->add_control( 'top_header_email_enable', array(
+		'label' => __( 'Enable Email Address', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'title_tagline',
-		'settings' => 'top_header_account_enable'
+		'settings' => 'top_header_email_enable'
 	) );
-
-
-	$wp_customize->add_setting( 'top_header_account', array(
-		'default'           => 'Account',
+	$wp_customize->add_setting( 'top_header_email', array(
+		'default'           => 'info@youremail.com',
 	) );
 	$wp_customize->add_control( 'top_header_account', array(
-		'label' => __( 'My Account', 'text_domain' ),
+		'label' => __( 'Email', 'themetim' ),
 		'type' => 'text',
 		'section' => 'title_tagline',
-		'settings' => 'top_header_account',
-		'description'   => __('## Title of the link ##', 'text_domain')
+		'settings' => 'top_header_email',
+		'description'   => __('', 'themetim')
 	) );
 
-	$wp_customize->add_setting(
-		'header_myaccount'
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Pages_Control(
-			$wp_customize,
-			'header_myaccount',
-			array(
-				'label'    => 'My Account Page',
-				'settings' => 'header_myaccount',
-				'section'  => 'title_tagline'
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		'header_login_register'
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Pages_Control(
-			$wp_customize,
-			'header_login_register',
-			array(
-				'label'    => 'Login / Register Page',
-				'settings' => 'header_login_register',
-				'section'  => 'title_tagline'
-			)
-		)
-	);
 	$wp_customize->add_setting( 'cart_enable', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'cart_enable', array(
-		'label' => __( 'Enable Cart', 'text_domain' ),
+		'label' => __( 'Enable Cart', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('# If WooCommerce Plugin Active #', 'themetim'),
 		'section' => 'title_tagline',
 		'settings' => 'cart_enable'
 	) );
-	/**
-	 * ThemeTim Divider
-	 */
-	$wp_customize->add_setting('themetim_options[divider]', array(
-			'type'              => 'divider_control',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new themetim_divider( $wp_customize, 'header_bottom', array(
-			'label' => __('Bottom Header', 'themetidy'),
-			'section' => 'title_tagline',
-			'settings' => 'themetim_options[divider]'
-		) )
-	);
 
 	$wp_customize->add_setting( 'bottom_header_search', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'bottom_header_search', array(
-		'label' => __( 'Enable Search', 'text_domain' ),
+		'label' => __( 'Enable Search', 'themetim' ),
 		'type' => 'checkbox',
 		'section' => 'title_tagline',
 		'settings' => 'bottom_header_search'
 	) );
+
+
 	/**
 	 * ThemeTim Divider
 	 */
@@ -457,7 +412,7 @@ function themetim_customize_register( $wp_customize ) {
 	 * Footer
 	 *********************************************/
 	$wp_customize->add_section( 'footer_settings', array(
-		'title' => __( 'Footer', 'text_domain' ),
+		'title' => __( 'Footer', 'themetim' ),
 		'description' => '',
 		'priority' => 20,
 	) );
@@ -481,9 +436,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'social_footer_enable', array(
-		'label' => __( 'Enable Footer Social', 'text_domain' ),
+		'label' => __( 'Enable Footer Social', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('## Please Go Back To Social Media Settings For Social Links ##', 'text_domain'),
+		'description'   => __('## Please Go Back To Social Media Settings For Social Links ##', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'social_footer_enable'
 	) );
@@ -492,9 +447,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'newsletter_footer_enable', array(
-		'label' => __( 'Enable Footer Newsletter', 'text_domain' ),
+		'label' => __( 'Enable Footer Newsletter', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'newsletter_footer_enable'
 	) );
@@ -502,21 +457,21 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'Newsletter',
 	) );
 	$wp_customize->add_control( 'top_footer_newsletter_title', array(
-		'label' => __( 'Heading', 'text_domain' ),
+		'label' => __( 'Heading', 'themetim' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'top_footer_newsletter_title',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'top_footer_newsletter_url', array(
 		'default'           => 'https://www.yourmailchimpurl.com',
 	) );
 	$wp_customize->add_control( 'top_footer_newsletter_url', array(
-		'label' => __( 'Mail Chimp URL', 'text_domain' ),
+		'label' => __( 'Mail Chimp URL', 'themetim' ),
 		'type' => 'textarea',
 		'section' => 'footer_settings',
 		'settings' => 'top_footer_newsletter_url',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 
 	/**
@@ -540,9 +495,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_text_enable', array(
-		'label' => __( 'Enable Description', 'text_domain' ),
+		'label' => __( 'Enable Description', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_text_enable'
 	) );
@@ -551,21 +506,21 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'About',
 	) );
 	$wp_customize->add_control( 'middle_footer_text_heading', array(
-		'label' => __( 'Heading', 'text_domain' ),
+		'label' => __( 'Heading', 'themetim' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_text_heading',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'middle_footer_text', array(
 		'default'           => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
 	) );
 	$wp_customize->add_control( 'middle_footer_text', array(
-		'label' => __( 'Description', 'text_domain' ),
+		'label' => __( 'Description', 'themetim' ),
 		'type' => 'textarea',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_text',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 
 
@@ -573,19 +528,19 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'The Service',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_1', array(
-		'label' => __( 'Heading', 'text_domain' ),
+		'label' => __( 'Heading', 'themetim' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_heading_1',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'middle_footer_nav_1_enable', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_1_enable', array(
-		'label' => __( 'Enable Nav 1', 'text_domain' ),
+		'label' => __( 'Enable Nav 1', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_1_enable'
 	) );
@@ -594,19 +549,19 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'Information',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_2', array(
-		'label' => __( 'Heading', 'text_domain' ),
+		'label' => __( 'Heading', 'themetim' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_heading_2',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'middle_footer_nav_2_enable', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_2_enable', array(
-		'label' => __( 'Enable Nav 2', 'text_domain' ),
+		'label' => __( 'Enable Nav 2', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_2_enable'
 	) );
@@ -615,19 +570,19 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => 'Follow Us',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_heading_3', array(
-		'label' => __( 'Heading', 'text_domain' ),
+		'label' => __( 'Heading', 'themetim' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_heading_3',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'middle_footer_nav_3_enable', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'middle_footer_nav_3_enable', array(
-		'label' => __( 'Enable Nav 3', 'text_domain' ),
+		'label' => __( 'Enable Nav 3', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_nav_3_enable'
 	) );
@@ -652,9 +607,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'bottom_footer_copyright_enable', array(
-		'label' => __( 'Enable Copyright', 'text_domain' ),
+		'label' => __( 'Enable Copyright', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'bottom_footer_copyright_enable'
 	) );
@@ -662,19 +617,19 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '© 2016 ThemeTim. All Rights Reserved.',
 	) );
 	$wp_customize->add_control( 'bottom_footer_copyright', array(
-		'label' => __( 'Text', 'text_domain' ),
+		'label' => __( 'Text', 'themetim' ),
 		'type' => 'text',
 		'section' => 'footer_settings',
 		'settings' => 'bottom_footer_copyright',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'bottom_footer_nav_enable', array(
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'bottom_footer_nav_enable', array(
-		'label' => __( 'Enable Nav', 'text_domain' ),
+		'label' => __( 'Enable Nav', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'footer_settings',
 		'settings' => 'bottom_footer_nav_enable'
 	) );
@@ -683,7 +638,7 @@ function themetim_customize_register( $wp_customize ) {
 	 * Blog
 	 *********************************************/
 	$wp_customize->add_section( 'blog_settings', array(
-		'title' => __( 'Blog', 'text_domain' ),
+		'title' => __( 'Blog', 'themetim' ),
 		'description' => '',
 		'priority' => 81,
 	) );
@@ -706,9 +661,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'blog_sidebar_enable', array(
-		'label' => __( 'Enable Sidebar', 'text_domain' ),
+		'label' => __( 'Enable Sidebar', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'blog_settings',
 		'settings' => 'blog_sidebar_enable'
 	) );
@@ -719,8 +674,8 @@ function themetim_customize_register( $wp_customize ) {
 		'type'        => 'number',
 		'section'     => 'blog_settings',
 		'settings' => 'excerpt_lenght',
-		'label'       => __('Excerpt length', 'text_domain'),
-		'description' => __('Excerpt length Default: 60 words', 'text_domain'),
+		'label'       => __('Excerpt length', 'themetim'),
+		'description' => __('Excerpt length Default: 60 words', 'themetim'),
 		'input_attrs' => array(
 			'min'   => 10,
 			'max'   => 200,
@@ -731,9 +686,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'blog_social_sharing_enable', array(
-		'label' => __( 'Enable Social Sharing', 'text_domain' ),
+		'label' => __( 'Enable Social Sharing', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'blog_settings',
 		'settings' => 'blog_social_sharing_enable'
 	) );
@@ -742,7 +697,7 @@ function themetim_customize_register( $wp_customize ) {
 	 * Shop
 	 *********************************************/
 	$wp_customize->add_section( 'shop_settings', array(
-		'title' => __( 'Shop', 'text_domain' ),
+		'title' => __( 'Shop', 'themetim' ),
 		'description' => '',
 		'priority' => 82,
 	) );
@@ -766,9 +721,9 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '1',
 	) );
 	$wp_customize->add_control( 'shop_sidebar_enable', array(
-		'label' => __( 'Enable Widget', 'text_domain' ),
+		'label' => __( 'Enable Widget', 'themetim' ),
 		'type' => 'checkbox',
-		'description'   => __('', 'text_domain'),
+		'description'   => __('', 'themetim'),
 		'section' => 'shop_settings',
 		'settings' => 'shop_sidebar_enable'
 	) );
@@ -780,7 +735,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'bg_text_color',
 		array(
-			'default'           => '#000',
+			'default'           => '#7d7d7d',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -789,7 +744,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'bg_text_color',
 			array(
-				'label'         => __('Body Text Color', 'text_domain'),
+				'label'         => __('Body Text Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'bg_text_color'
 			)
@@ -798,7 +753,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'heading_color',
 		array(
-			'default'           => '#000',
+			'default'           => '#373c5f',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -807,7 +762,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'heading_color',
 			array(
-				'label'         => __('Heading Color', 'text_domain'),
+				'label'         => __('Heading Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'heading_color'
 			)
@@ -825,7 +780,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'link_color',
 			array(
-				'label'         => __('Link Color', 'text_domain'),
+				'label'         => __('Link Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'link_color'
 			)
@@ -834,7 +789,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_hover_color',
 		array(
-			'default'           => '#555',
+			'default'           => '#373c5f',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
@@ -843,7 +798,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'link_hover_color',
 			array(
-				'label'         => __('Link Hover Color', 'text_domain'),
+				'label'         => __('Link Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'link_hover_color'
 			)
@@ -877,7 +832,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'header_bg_color',
 			array(
-				'label'         => __('Header Background', 'text_domain'),
+				'label'         => __('Header Background', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'header_bg_color'
 			)
@@ -895,7 +850,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'header_text_color',
 			array(
-				'label'         => __('Header Text Color', 'text_domain'),
+				'label'         => __('Header Text Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'header_text_color'
 			)
@@ -930,7 +885,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'footer_bg_color',
 			array(
-				'label'         => __('Footer Background', 'text_domain'),
+				'label'         => __('Footer Background', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'footer_bg_color'
 			)
@@ -948,7 +903,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'footer_text_color',
 			array(
-				'label'         => __('Footer Text Color', 'text_domain'),
+				'label'         => __('Footer Text Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'footer_text_color'
 			)
@@ -982,7 +937,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_default_bg',
 			array(
-				'label'         => __('Default BG Color', 'text_domain'),
+				'label'         => __('Default BG Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_default_bg'
 			)
@@ -1001,7 +956,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_default_text',
 			array(
-				'label'         => __('Default Text Color', 'text_domain'),
+				'label'         => __('Default Text Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_default_text'
 			)
@@ -1019,7 +974,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_default_border',
 			array(
-				'label'         => __('Default Border Color', 'text_domain'),
+				'label'         => __('Default Border Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_default_border'
 			)
@@ -1038,7 +993,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_default_bg_hover',
 			array(
-				'label'         => __('Default BG Hover Color', 'text_domain'),
+				'label'         => __('Default BG Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_default_bg_hover'
 			)
@@ -1056,7 +1011,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_default_text_hover',
 			array(
-				'label'         => __('Default Text Hover Color', 'text_domain'),
+				'label'         => __('Default Text Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_default_text_hover'
 			)
@@ -1074,7 +1029,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_default_border_hover',
 			array(
-				'label'         => __('Default Border Hover Color', 'text_domain'),
+				'label'         => __('Default Border Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_default_border_hover'
 			)
@@ -1108,7 +1063,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_primary_bg',
 			array(
-				'label'         => __('Primary BG Color', 'text_domain'),
+				'label'         => __('Primary BG Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_primary_bg'
 			)
@@ -1126,7 +1081,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_primary_text',
 			array(
-				'label'         => __('Primary Text Color', 'text_domain'),
+				'label'         => __('Primary Text Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_primary_text'
 			)
@@ -1144,7 +1099,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_primary_border',
 			array(
-				'label'         => __('Primary Border Color', 'text_domain'),
+				'label'         => __('Primary Border Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_primary_border'
 			)
@@ -1162,7 +1117,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_primary_bg_hover',
 			array(
-				'label'         => __('Primary BG Hover Color', 'text_domain'),
+				'label'         => __('Primary BG Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_primary_bg_hover'
 			)
@@ -1180,7 +1135,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_primary_text_hover',
 			array(
-				'label'         => __('Primary Text Hover Color', 'text_domain'),
+				'label'         => __('Primary Text Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_primary_text_hover'
 			)
@@ -1198,7 +1153,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_primary_border_hover',
 			array(
-				'label'         => __('Primary Border Hover Color', 'text_domain'),
+				'label'         => __('Primary Border Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_primary_border_hover'
 			)
@@ -1232,7 +1187,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_success_bg',
 			array(
-				'label'         => __('Success BG Color', 'text_domain'),
+				'label'         => __('Success BG Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_success_bg'
 			)
@@ -1250,7 +1205,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_success_text',
 			array(
-				'label'         => __('Success Text Color', 'text_domain'),
+				'label'         => __('Success Text Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_success_text'
 			)
@@ -1268,7 +1223,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_success_border',
 			array(
-				'label'         => __('Success Border Color', 'text_domain'),
+				'label'         => __('Success Border Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_success_border'
 			)
@@ -1286,7 +1241,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_success_bg_hover',
 			array(
-				'label'         => __('Success BG Hover Color', 'text_domain'),
+				'label'         => __('Success BG Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_success_bg_hover'
 			)
@@ -1304,7 +1259,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_success_text_hover',
 			array(
-				'label'         => __('Success Text Hover Color', 'text_domain'),
+				'label'         => __('Success Text Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_success_text_hover'
 			)
@@ -1322,7 +1277,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'btn_success_border_hover',
 			array(
-				'label'         => __('Success Border Hover Color', 'text_domain'),
+				'label'         => __('Success Border Hover Color', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'btn_success_border_hover'
 			)
@@ -1356,7 +1311,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'text_color_1',
 			array(
-				'label'         => __('Text Color 1', 'text_domain'),
+				'label'         => __('Text Color 1', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'text_color_1'
 			)
@@ -1374,7 +1329,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'text_color_2',
 			array(
-				'label'         => __('Text Color 2', 'text_domain'),
+				'label'         => __('Text Color 2', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'text_color_2'
 			)
@@ -1407,7 +1362,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'bg_color_1',
 			array(
-				'label'         => __('BG Color 1', 'text_domain'),
+				'label'         => __('BG Color 1', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'bg_color_1'
 			)
@@ -1425,7 +1380,7 @@ function themetim_customize_register( $wp_customize ) {
 			$wp_customize,
 			'bg_color_2',
 			array(
-				'label'         => __('BG Color 2', 'text_domain'),
+				'label'         => __('BG Color 2', 'themetim'),
 				'section'       => 'colors',
 				'settings'      => 'bg_color_2'
 			)
@@ -1436,7 +1391,7 @@ function themetim_customize_register( $wp_customize ) {
 	 * Typography
 	 *********************************************/
 	$wp_customize->add_section( 'typography', array(
-		'title' => __( 'Typography', 'text_domain' ),
+		'title' => __( 'Typography', 'themetim' ),
 		'description' => '',
 		'priority' => 40,
 	) );
@@ -1444,7 +1399,7 @@ function themetim_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'body_font_family',
 		array(
-			'default' => 'Open+Sans',
+			'default' => 'Poppins',
 			'capability'     => 'edit_theme_options'
 		)
 	);
@@ -1455,6 +1410,7 @@ function themetim_customize_register( $wp_customize ) {
 			'label' => 'Body Font',
 			'section' => 'typography',
 			'choices' => array(
+				'Poppins' => 'Poppins',
 				'Open+Sans' => 'Open Sans',
 				'Abel' => 'Abel',
 				'Roboto' => 'Roboto',
@@ -1484,24 +1440,24 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '14',
 	) );
 	$wp_customize->add_control( 'body_font_size', array(
-		'label' => __( 'Font Size', 'text_domain' ),
+		'label' => __( 'Font Size', 'themetim' ),
 		'type' => 'number',
 		'section' => 'typography',
 		'settings' => 'body_font_size',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'body_font_weight', array(
-		'default'           => '300,400',
+		'default'           => '400',
 	) );
 	$wp_customize->add_control( 'body_font_weight', array(
-		'label' => __( 'Font Weight', 'text_domain' ),
+		'label' => __( 'Font Weight', 'themetim' ),
 		'type' => 'text',
 		'section' => 'typography',
 		'settings' => 'body_font_weight',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting('heading_font_family', array(
-		'default'        => 'Open+Sans',
+		'default'        => 'Poppins',
 		'capability'     => 'edit_theme_options',
 	));
 	$wp_customize->add_control( 'heading_font_family', array(
@@ -1509,6 +1465,7 @@ function themetim_customize_register( $wp_customize ) {
 		'section' => 'typography',
 		'type'    => 'select',
 		'choices' => array(
+			'Poppins' => 'Poppins',
 			'Open+Sans' => 'Open Sans',
 			'Abel' => 'Abel',
 			'Roboto' => 'Roboto',
@@ -1534,14 +1491,14 @@ function themetim_customize_register( $wp_customize ) {
 		),
 	));
 	$wp_customize->add_setting( 'heading_font_weight', array(
-		'default'           => '400,700',
+		'default'           => '700',
 	) );
 	$wp_customize->add_control( 'heading_font_weight', array(
-		'label' => __( 'Font Weight', 'text_domain' ),
+		'label' => __( 'Font Weight', 'themetim' ),
 		'type' => 'text',
 		'section' => 'typography',
 		'settings' => 'heading_font_weight',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	/**
 	 * ThemeTim Divider
@@ -1563,41 +1520,41 @@ function themetim_customize_register( $wp_customize ) {
 		'default'           => '80',
 	) );
 	$wp_customize->add_control( 'section_gap_1', array(
-		'label' => __( 'Section Gap 1', 'text_domain' ),
+		'label' => __( 'Section Gap 1', 'themetim' ),
 		'type' => 'number',
 		'section' => 'typography',
 		'settings' => 'section_gap_1',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'section_gap_2', array(
 		'default'           => '80',
 	) );
 	$wp_customize->add_control( 'section_gap_2', array(
-		'label' => __( 'Section Gap 2', 'text_domain' ),
+		'label' => __( 'Section Gap 2', 'themetim' ),
 		'type' => 'number',
 		'section' => 'typography',
 		'settings' => 'section_gap_2',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'section_gap_3', array(
 		'default'           => '50',
 	) );
 	$wp_customize->add_control( 'section_gap_3', array(
-		'label' => __( 'Section Gap 3', 'text_domain' ),
+		'label' => __( 'Section Gap 3', 'themetim' ),
 		'type' => 'number',
 		'section' => 'typography',
 		'settings' => 'section_gap_3',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 	$wp_customize->add_setting( 'section_gap_4', array(
 		'default'           => '50',
 	) );
 	$wp_customize->add_control( 'section_gap_4', array(
-		'label' => __( 'Section Gap 4', 'text_domain' ),
+		'label' => __( 'Section Gap 4', 'themetim' ),
 		'type' => 'number',
 		'section' => 'typography',
 		'settings' => 'section_gap_4',
-		'description'   => __('', 'text_domain')
+		'description'   => __('', 'themetim')
 	) );
 
 

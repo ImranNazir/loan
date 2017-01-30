@@ -3,42 +3,9 @@
  Version:   1.0
  ********************************************************/
 jQuery(function(){
-
-    /*******************************************************************************
-     * Camera Slider Load
-     *******************************************************************************/
-    if (jQuery('.main-slider').length) {
-        jQuery('.main-slider').camera({
-            height: '50%',
-            loader: 'bar',
-            margin:'',
-            alignment: 'center',
-            minHeight: '600px',
-            barPosition: 'top',
-            thumbnails: true,
-            playPause: false,
-            loaderColor: '#f9f9f9',
-            loaderBgColor: '#ddd',
-            hover: true,
-            opacityOnGrid: false
-        });
-    }
     /*******************************************************************************
      * Carousel Slider
      *******************************************************************************/
-    if(jQuery('.related').length){
-        jQuery('.related .products').owlCarousel({
-            loop:true,
-            margin:30,
-            responsiveClass:true,
-            items:4,
-            autoplay:false,
-            animateOut: true,
-            nav: true,
-            navText: ["<span><i class='fa fa-angle-left fa-2x'></i></span>","<span><i class='fa fa-angle-right  fa-2x'></i></span>"]
-
-        });
-    }
     if(jQuery('.thumbnails').length){
         jQuery('.images .thumbnails').owlCarousel({
             loop:true,
@@ -87,12 +54,12 @@ jQuery(function(){
 
     var head = jQuery( 'header' ).height();
     jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > head){
+       /* if (jQuery(this).scrollTop() > head){
             jQuery('header').addClass("sticky");
         }
         else{
             jQuery('header').removeClass("sticky");
-        }
+        }*/
     });
     /*******************************************************************************
      * Body Animation
