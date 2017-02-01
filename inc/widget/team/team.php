@@ -64,8 +64,8 @@ class Themetim_Team_Widget extends SiteOrigin_Widget {
 					'options' => array(
 						'12' => 1,
 						'6' => 2,
-						'3' => 3,
-						'4' => 4,
+						'3' => 4,
+						'4' => 3,
 					),
 				),
 			)

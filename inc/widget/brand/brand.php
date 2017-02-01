@@ -49,7 +49,7 @@ class Themetim_Brand_Widget extends SiteOrigin_Widget {
                             'label'    => __( 'Image', 'themetim' ),
                             'fallback' => true,
                         ),
-                        'pricing_button_url' => array(
+                        'button_url' => array(
                             'type' => 'link',
                             'label' => __('Button URL', 'themetim'),
                             'default' => ''
@@ -66,4 +66,4 @@ class Themetim_Brand_Widget extends SiteOrigin_Widget {
     }
 }
 
-siteorigin_widget_register( 'themetim-pricing-widget', __FILE__, 'Themetim_Brand_Widget' );
+siteorigin_widget_register( 'themetim-brand-widget', __FILE__, 'Themetim_Brand_Widget' );

@@ -5,6 +5,7 @@
  */
 if ( class_exists( 'SiteOrigin_Widget' ) ) {
     require get_template_directory() . '/inc/widget/our-process/our-process.php';
+    require get_template_directory() . '/inc/widget/contact-details/contact-details.php';
     require get_template_directory() . '/inc/widget/testimonial/testimonial.php';
     require get_template_directory() . '/inc/widget/brand/brand.php';
     require get_template_directory() . '/inc/widget/pricing/pricing.php';

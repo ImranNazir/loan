@@ -11,16 +11,16 @@ $margin[] = 'padding-gap-6 overflow';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($margin); ?>>
-	<header class="entry-header margin-bottom-20">
+	<header class="margin-bottom-20">
 		<?php
 		if ( is_single() ) {
-			the_title( '<h3 class="entry-title page-header text-capitalize margin-null">', '</h3>' );
+			the_title( '<h3 class="entry-title margin-null">', '</h3>' );
 		} else {
-			the_title( '<h3 class="entry-title  page-header margin-null text-capitalize"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+			the_title( '<h3 class="entry-title margin-null"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		}
 
 		if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta  margin-top-10">
+			<div class="entry-meta margin-top-10">
 				<?php themetim_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php
@@ -61,7 +61,7 @@ $margin[] = 'padding-gap-6 overflow';
 	<footer class="entry-footer overflow">
 		<?php if(!is_single()) : ?>
 		<div class="pull-left">
-			<a href="<?php the_permalink(); ?>" class="btn btn-default margin-top-10">Continue Reading</a>
+			<a href="<?php the_permalink(); ?>" class="btn btn-default margin-top-10">See More</a>
 		</div>
 		<?php endif; ?>
 		<?php if (get_theme_mod('blog_social_sharing_enable', '1')) : ?>
