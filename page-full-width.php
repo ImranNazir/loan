@@ -9,9 +9,6 @@
 get_header(); ?>
 
     <main class="full-width-page">
-        <?php if(is_front_page()) :
-            require get_template_directory() . '/template-parts/main-slider.php';
-        endif; ?>
         <section class="banner">
             <div class="container-fluid">
                 <div class="row">

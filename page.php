@@ -15,9 +15,6 @@
 get_header(); ?>
 
 	<main class="default-page">
-		<?php if(is_front_page()) :
-			require get_template_directory() . '/template-parts/main-slider.php';
-		endif; ?>
 		<section>
 			<div class="container">
 				<div class="row">

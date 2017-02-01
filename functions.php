@@ -98,16 +98,7 @@ function themetim_widgets_init() {
 		'after_title'   => '</h4>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html__( 'Blog & Article', 'themetim' ),
-		'id'            => 'blog-article',
-		'description'   => esc_html__( 'Blog & Article', 'themetim' ),
-		'before_widget' => '<section id="%1$s" class="widget themetim-widget %2$s blog-article">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Shop & Product Page', 'themetim' ),
+		'name'          => esc_html__( 'Shop Page', 'themetim' ),
 		'id'            => 'shop-product',
 		'description'   => esc_html__( 'Widget For Shop & Product Pages', 'themetim' ),
 		'before_widget' => '<section id="%1$s" class="widget themetim-widget %2$s shop-widget">',
@@ -193,7 +184,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 /**
  * ThemeTim Post Type
  */
-	//require get_template_directory() . '/inc/woo-hook.php';
+	require get_template_directory() . '/inc/woo-hook.php';
 }
 /**
  * ThemeTim widget

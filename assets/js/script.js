@@ -3,55 +3,6 @@
  Version:   1.0
  ********************************************************/
 jQuery(function(){
-    /*******************************************************************************
-     * Carousel Slider
-     *******************************************************************************/
-    if(jQuery('.thumbnails').length){
-        jQuery('.images .thumbnails').owlCarousel({
-            loop:true,
-            margin:10,
-            responsiveClass:true,
-            items:4,
-            autoplay:true,
-            nav: true,
-            navText: ["<span><i class='fa fa-angle-left fa-2x'></i></span>","<span><i class='fa fa-angle-right  fa-2x'></i></span>"]
-        });
-    }
-    /*******************************************************************************
-     * Brand Slider
-     *******************************************************************************/
-
-    if(jQuery('.brand-carousel').length){
-        var brand = jQuery('.brand-carousel').owlCarousel({
-            loop:true,
-            autoplay:true,
-            responsiveClass:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                480:{
-                    items:3
-                },
-                768:{
-                    items:4
-                },
-                1024:{
-                    items:5
-                },
-                1366:{
-                    items:6
-                }
-            }
-        });
-        jQuery('.next').click(function () {
-            brand.trigger('next.owl.carousel', [1000]);
-        });
-        jQuery('.prev').click(function () {
-            brand.trigger('prev.owl.carousel', [1000]);
-        });
-    }
-
     var head = jQuery( 'header' ).height();
     jQuery(window).scroll(function() {
        /* if (jQuery(this).scrollTop() > head){

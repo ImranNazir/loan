@@ -88,18 +88,6 @@
 			</div>
 		</section>
 	</header>
-	<?php if ( class_exists( 'WooCommerce' ) && !is_front_page()) {?>
-		<!--------------- Woo Breadcrumb ---------------->
-		<section class="breadcrumb-wrap text-capitalize">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<?php woocommerce_breadcrumb(); ?>
-					</div>
-				</div>
-			</div>
-		</section>
-	<?php } ?>
 	<!-- Search Modal -->
 	<div class="modal fade search-pop" id="search-pop" tabindex="-1" role="dialog" aria-labelledby="request-a-quote">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>

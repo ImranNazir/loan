@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<main>
+<main class="padding-gap-1">
 	<section>
 		<div class='container'>
 			<div class='row'>
@@ -34,40 +34,25 @@ get_header( 'shop' ); ?>
 				 */
 				do_action( 'woocommerce_before_main_content' );
 				?>
-				<?php if (get_theme_mod('shop_sidebar_enable') ) : ?>
-				<div class='col-md-9 col-sm-12 col-xs-12'>
-					<?php else: ?>
-					<div class="col-md-12 col-sm-12 col-xs-12">
-						<?php endif; ?>
-						<?php while ( have_posts() ) : the_post(); ?>
+				<div class="col-md-12 col-sm-12 col-xs-12">
 
-							<?php wc_get_template_part( 'content', 'single-product' ); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php endwhile; // end of the loop. ?>
+						<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-						<?php
-						/**
-						 * woocommerce_after_main_content hook.
-						 *
-						 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-						 */
-						do_action( 'woocommerce_after_main_content' );
-						?>
-					</div>
+					<?php endwhile; // end of the loop. ?>
+
 					<?php
 					/**
-					 * woocommerce_sidebar hook.
+					 * woocommerce_after_main_content hook.
 					 *
-					 * @hooked woocommerce_get_sidebar - 10
+					 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 					 */
-					if (get_theme_mod('shop_sidebar_enable') ) :
-						?><aside id="secondary" class="widget-area col-md-3 col-sm-12 col-xs-12 padding-gap-1" role="complementary"><?php
-						dynamic_sidebar( 'shop-product' );
-						?></aside><?php
-					endif;
+					do_action( 'woocommerce_after_main_content' );
 					?>
 				</div>
 			</div>
+		</div>
 	</section>
 </main>
 <?php get_footer( 'shop' ); ?>

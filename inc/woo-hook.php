@@ -4,15 +4,6 @@
  */
 
 
-/**
- * Themetim Product Columns
- */
-add_filter('loop_shop_columns', 'loop_columns');
-if (!function_exists('loop_columns')) {
-    function loop_columns() {
-        return 4; // 3 products per row
-    }
-}
 
 /**
  * Themetim Ajax Cart
@@ -34,8 +25,8 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
  * Remove hook
  * Modify Breadcrumbs
  */
-add_action( 'init', 'jk_remove_wc_breadcrumbs' );
-function jk_remove_wc_breadcrumbs() {
+add_action( 'init', 'remove_wc_breadcrumbs' );
+function remove_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
 
@@ -44,4 +35,4 @@ function jk_remove_wc_breadcrumbs() {
  *
  * Number of products displayed per page
  */
-add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 8;' ), 20 );

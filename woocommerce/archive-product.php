@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<main class="themetim-archive-product padding-gap-2">
+<main class="themetim-archive-product padding-gap-1">
 	<section>
 		<div class='container'>
 			<div class='row'>
@@ -34,12 +34,10 @@ get_header( 'shop' ); ?>
 				 */
 				do_action( 'woocommerce_before_main_content' );
 				?>
-				<div class='col-md-12 col-sm-12 col-xs-12 cat-description'>
+				<div class='col-md-12 col-sm-12 col-xs-12 cat-description margin-bottom-30'>
 					<div class='text-center'>
 						<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
 							<h2 class="page-header"><?php woocommerce_page_title(); ?></h2>
-
 						<?php endif; ?>
 					</div>
 					<?php
@@ -53,9 +51,9 @@ get_header( 'shop' ); ?>
 					?>
 				</div>
 				<?php if (get_theme_mod('shop_sidebar_enable','1') ) : ?>
-				<div class='col-md-9 col-sm-12 col-xs-12'>
+				<div class='col-md-9 col-sm-12 col-xs-12 padding-gap-2 archive-product'>
 					<?php else: ?>
-					<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="col-md-12 col-sm-12 col-xs-12 padding-gap-2 archive-product">
 						<?php endif; ?>
 						<?php if ( have_posts() ) : ?>
 
@@ -111,9 +109,12 @@ get_header( 'shop' ); ?>
 					 *
 					 * @hooked woocommerce_get_sidebar - 10
 					 */
-					if (get_theme_mod('shop_sidebar_enable') ) :
-						?><aside id="secondary" class="widget-area col-md-3 col-sm-12 col-xs-12 padding-gap-1" role="complementary"><?php
-						dynamic_sidebar( 'shop-product' );
+					if (get_theme_mod('shop_sidebar_enable','1') ) :
+						?><aside id="secondary" class="widget-area col-md-3 col-sm-12 col-xs-12 padding-gap-2" role="complementary"><?php
+						if ( is_active_sidebar( 'shop-product' ) ) :
+							dynamic_sidebar( 'shop-product' );
+						else: echo "<h2>Sidebar Empty</h2>";
+						endif;
 						?></aside><?php
 					endif;
 					?>

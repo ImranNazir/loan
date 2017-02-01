@@ -7,41 +7,40 @@
  * @package ThemeTim_WordPress_Framework
  */
 
-$margin[] = 'padding-gap-6 overflow';
+$margin[] = 'padding-gap-4 overflow';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class($margin); ?>>
-	<header class="margin-bottom-20">
-		<?php
-		if ( is_single() ) {
-			the_title( '<h3 class="entry-title margin-null">', '</h3>' );
-		} else {
-			the_title( '<h3 class="entry-title margin-null"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
-		}
-
-		if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta margin-top-10">
-				<?php themetim_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php
-		endif; ?>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php
 
 		if(has_post_thumbnail()):
 			if(is_single()) { ?>
 				<img src="<?php echo $post_thumbnail_id = get_the_post_thumbnail_url(); ?>"
-					 class="img-responsive margin-top-20 margin-bottom-20" alt=""/>
-				<?php } else { ?>
+					 class="img-responsive margin-bottom-30" alt=""/>
+			<?php } else { ?>
 				<a href="<?php the_permalink(); ?>"><img
 						src="<?php echo $post_thumbnail_id = get_the_post_thumbnail_url(); ?>"
-						class="img-responsive margin-top-20 margin-bottom-20" alt=""/></a>
+						class="img-responsive margin-bottom-30" alt=""/></a>
 				<?php
 			}
-		endif;
+		endif; ?>
+		<header class="margin-bottom-30">
+			<?php
+			if ( is_single() ) {
+				the_title( '<h1 class="entry-title margin-null">', '</h1>' );
+			} else {
+				the_title( '<h1 class="entry-title margin-null"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+			}
 
+			if ( 'post' === get_post_type() ) : ?>
+				<div class="entry-meta margin-top-10">
+					<?php themetim_posted_on(); ?>
+				</div><!-- .entry-meta -->
+				<?php
+			endif; ?>
+		</header><!-- .entry-header -->
+		<?php
 		if(is_single()) :
 			the_content();
 		else:
@@ -55,19 +54,18 @@ $margin[] = 'padding-gap-6 overflow';
 			'after'  => '</div>',
 		) );
 		?>
-
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer overflow">
 		<?php if(!is_single()) : ?>
-		<div class="pull-left">
-			<a href="<?php the_permalink(); ?>" class="btn btn-default margin-top-10">See More</a>
-		</div>
+			<div class="pull-left">
+				<a href="<?php the_permalink(); ?>" class="btn btn-default margin-top-10">See More</a>
+			</div>
 		<?php endif; ?>
 		<?php if (get_theme_mod('blog_social_sharing_enable', '1')) : ?>
-		<div class="pull-right margin-top-10">
-			<?php themetim_social_sharing(); ?>
-		</div>
+			<div class="pull-right margin-top-10">
+				<?php themetim_social_sharing(); ?>
+			</div>
 		<?php endif; ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

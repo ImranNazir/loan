@@ -26,7 +26,7 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
-$add_class[] = 'product-fix margin-top-30 text-center overflow';
+$add_class[] = 'product-fix margin-top-30 text-center';
 ?>
 <li <?php post_class($add_class); ?>>
 	<?php
