@@ -26,7 +26,7 @@
 
 			<form role="search" method="get" class="search-form form-inline margin-top-20" action="<?php echo home_url( '/' ); ?>">
 				<input type="search" class="search-field form-control"
-					   placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+					   placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>"
 					   value="<?php echo get_search_query() ?>" name="s"
 					   title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 
@@ -34,14 +34,13 @@
 					   value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 			</form>
 			<?php
-		//get_search_form();
 
 		else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'themetim' ); ?></p>
 			<form role="search" method="get" class="search-form form-inline margin-top-20" action="<?php echo home_url( '/' ); ?>">
 				<input type="search" class="search-field form-control"
-					   placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+					   placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>"
 					   value="<?php echo get_search_query() ?>" name="s"
 					   title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 
@@ -49,8 +48,6 @@
 					   value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 			</form>
 			<?php
-			//get_search_form();
-
 		endif; ?>
 	</div><!-- .page-content -->
 </div><!-- .no-results -->

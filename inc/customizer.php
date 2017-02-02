@@ -1531,4 +1531,3 @@ function themetim_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'themetim_customize_preview_js' );
 
-

@@ -166,7 +166,7 @@ add_action( 'themetim_middle_footer_nav_2', 'middle_footer_nav_2' );
 function bottom_footer_copyright(){
     ?>
     <div class="col-md-6 col-sm-6 col-xs-12 site-info">
-        <p><?php echo get_theme_mod('bottom_footer_copyright','© ThemeTim. All Rights Reserved.'); ?></p>
+        <p><?php echo get_theme_mod('bottom_footer_copyright','&copy; ThemeTim. All Rights Reserved.'); ?></p>
     </div>
     <?php
 }

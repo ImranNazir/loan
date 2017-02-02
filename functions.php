@@ -83,6 +83,18 @@ endif;
 add_action( 'after_setup_theme', 'themetim_setup' );
 
 /**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function themetim_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'themetim_content_width', 1170 );
+}
+add_action( 'after_setup_theme', 'themetim_content_width', 0 );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -218,6 +230,7 @@ add_filter( 'max_srcset_image_width', create_function( '', 'return 1;' ) );
 require_once dirname( __FILE__ ) . '/inc/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'themetim_active_plugins' );
+
 function themetim_active_plugins() {
 	$plugins = array(
 		array(
