@@ -26,7 +26,7 @@
 				if(get_theme_mod('middle_footer_nav_2_enable','1')) :
 					do_action('themetim_middle_footer_nav_2');
 				endif; ?>
-				<div class="col-md-3 col-sm-3 col-xs-12 padding-top-50">
+				<div class="col-md-3 col-sm-6 col-xs-12 padding-top-50">
 					<?php
 					//--------------- Footer Newsletter ----------------//
 					do_action('themetim_footer_newsletter');

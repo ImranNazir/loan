@@ -13,21 +13,48 @@
         ## Min Width 992px And Max Width 1199px
 ********************************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
-    .woocommerce a.add_to_cart_button{
-        padding: .618em 6px;
+    .primary-menu ul li a {
+        padding: 9px 10px 3px;
     }
-    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-        width: 22.566666%;
-    }
-    .woocommerce.archive ul.products li.last{
-        margin-right: 0;
+    .brand li {
+        padding: 0 25px;
     }
 }
 /********************************************************
-        ## Min Width 992px And Max Width 1199px
+        ## Min Width 768px And Max Width 991px
 ********************************************************/
 @media (min-width: 768px) and (max-width: 991px){
-
+    .primary-menu ul li a {
+        padding: 9px 7px 3px;
+        font-size: 12px;
+    }
+    .logo img{
+        max-height: 29px;
+    }
+    .camera_target_content {
+        top: 8%;
+    }
+    .our-process-list .column li::after{
+        display: none;
+    }
+    .timeline {
+        padding: 18px 95px 30px 30px;
+    }
+    .our-process-list .column>li:nth-child(2n+2)::before {
+        top: 41%;
+    }
+    .column>li:nth-child(2n+2) .timeline {
+        padding: 130px 30px 30px 95px;
+    }
+    .pricing-list {
+        padding: 15px;
+    }
+    .brand img {
+        max-height: 25px;
+    }
+    .brand li {
+        padding: 0 15px;
+    }
 }
 /********************************************************
         ## Max Width 767px
@@ -44,9 +71,17 @@
     }
     .navbar-default .navbar-collapse {
         overflow: hidden;
+        float: none !important;
+        width: 100%;
     }
-    .primary-menu ul.nav li.dropdown:hover > ul.dropdown-menu {
+    .primary-menu ul.nav li.dropdown:hover > ul.dropdown-menu,.our-process-list .column li::before, .our-process-list .column>li:nth-child(2n+2)::before,.our-process-list .column li::after, .our-process-list .column>li:nth-child(2n+2)::after,.our-process-list .column::after{
         display: none;
+    }
+    .sticky.header {
+        position: relative;
+    }
+    .sticky .header-top {
+        display: block;
     }
     .primary-menu ul.nav li.dropdown > ul.dropdown-menu.active {
         display: block;
@@ -76,36 +111,73 @@
         width: auto;
     }
     .primary-menu ul li a {
-        padding: 15px;
+        padding: 9px 7px;
     }
     .navbar-default .navbar-toggle{
-
+        margin: 0 0 0 15px;
+        border-color: #b49132;
     }
     .navbar-default .navbar-toggle .icon-bar{
-
+        background-color: #b49132;
     }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-
+        background-color: #b49132;
     }
     .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
-
+        background-color: #fff;
     }
     .woocommerce .product-fix .compare, .woocommerce .product-fix .yith-wcqv-button{
         visibility: visible;
         bottom: 0;
     }
-    .margin-top-xs-20{
-        margin-top: 20px;
-    }
     .footer-bottom ,.footer-bottom ul{
         text-align: center;
     }
-
+    .camera-slider-inner.text-center ,.camera-slider-inner.text-left,.camera-slider-inner.text-right{
+        padding: 0 15px;
+    }
+    .camera_target_content {
+        top: 3%;
+    }
+    .camera-slider-inner h1 {
+        font-size: 24px;
+    }
+    .camera-slider-inner h3 {
+        font-size: 20px;
+    }
+    .service-fix {
+        padding: 25px;
+    }
+    .our-process-list .column>li {
+        width: 100%;
+    }
+    .timeline,.column>li:nth-child(2n+2) .timeline {
+        padding: 0 13px;
+        text-align: left;
+    }
+    .pricing-list {
+        padding: 20px;
+    }
 }
 /********************************************************
         ## Max Width 480px
 ********************************************************/
 @media only screen and (max-width:480px) {
+    .brand img {
+        max-height: 25px;
+    }
+    .brand li {
+        padding: 0 5px;
+    }
+    .page-header{
+        font-size: 30px;
+    }
+    .camera_target_content {
+        top: 7%;
+    }
+    .slider-details{
+        display: none;
+    }
     .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product, .woocommerce[class*=columns-] ul.products li.product{
         width: 100%;
     }

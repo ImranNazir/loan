@@ -104,23 +104,21 @@ img{
 	font-size: 10px;
 	font-weight: normal;
 }
-.breadcrumb{
-	background-color: transparent;
-	border-radius: 0;
-	font-size: 12px;
-	letter-spacing: 1px;
-	padding: 6px 0 5px 0;
-}
 .breadcrumb-wrap{
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
-	padding: 2px 0;
+	border-top: 1px solid #f9f9f9;
+	border-bottom: 1px solid #f9f9f9;
+	padding: 9px 0;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	font-size: 12px;
 }
-.breadcrumb>li+li:before {
-	padding: 0 10px;
-	color: #000;
-	content: "\f105";
-	font-family: FontAwesome;
+.breadcrumb{
+	background: transparent;
+	border-radius: 0;
+	padding: 0;
+}
+.breadcrumb .separator {
+	margin: 0 5px;
 }
 .padding-null{
 	padding: 0;
@@ -219,14 +217,27 @@ img{
 .sticky .header-top,.mini-cart-search .cart-contents span{
 	display: none;
 }
-header,.sticky .header-bottom{
-	transition: all 0.4s ease;
+.header,.sticky{
+	position: relative;
+	z-index: 10;
+	-webkit-transition: top 500ms ease-in-out;
+	-moz-transition: top 500ms ease-in-out;
+	-o-transition: top 500ms ease-in-out;
+	transition: top 500ms ease-in-out;
+	top: -50%;
 }
-.sticky .header-bottom{
+.sticky.header{
 	top: 0;
 	position: fixed;
 	width: 100%;
-	z-index: 10;
+	background: rgba(255, 255, 255, .9);
+}
+.sticky .header-bottom{
+	padding: 15px 0;
+}
+.sticky .logo img{
+	max-height: 25px;
+	margin-top: 5px;
 }
 /********************************************************
     ## Menu, Slider
@@ -250,6 +261,9 @@ header,.sticky .header-bottom{
 	padding: 0;
 	border-radius: 0;
 	margin: 0;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+	background: #f9f9f9;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
 	background-color: transparent;
@@ -577,6 +591,9 @@ span.comment-author-link {
 /********************************************************
     ## WooCommerce
 ********************************************************/
+.woocommerce div.product form.cart div.quantity{
+	margin: 4px 4px 4px 0;
+}
 .woocommerce div.product form.cart{
 	margin-top: 30px;
 	margin-bottom: 40px;
@@ -642,6 +659,20 @@ span.comment-author-link {
 	padding-top: 20px;
 	padding-bottom: 60px;
 }
+.footer-top h4{
+	position: relative;
+}
+.newsletter  .input-group{
+	margin-top: 7px;
+}
+.footer-top h4::after{
+	content: '';
+	display: block;
+	width: 25px;
+	border: 1px solid #b49132;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
 .newsletter .form-control{
 	background: none;
 	padding: 6px 21px;
@@ -649,7 +680,7 @@ span.comment-author-link {
 	color: #b49132;
 }
 .footer-social{
-	margin-top: 40px;
+	margin-top: 30px;
 }
 .footer-top .footer-social a{
 	margin-top: 10px;

@@ -194,7 +194,10 @@ require get_template_directory() . '/inc/widget/widget-setting.php';
  * ThemeTim Theme Functions
  */
 require get_template_directory() . '/inc/theme-functions.php';
-
+/**
+ * ThemeTim Breadcrumb
+ */
+require get_template_directory() . '/inc/breadcrumb.php';
 /**
  * ThemeTim the excerpt length
  */

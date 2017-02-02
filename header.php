@@ -53,6 +53,13 @@
 									<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'description' ); ?></a></p>
 								<?php endif ?>
 							</div>
+							<div class="navbar-header pull-right">
+								<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
 							<div class="text-right mini-cart-search pull-right">
 								<ul class="list-inline margin-bottom-0">
 									<li>
@@ -68,13 +75,6 @@
 									</li>
 								</ul>
 							</div>
-							<div class="navbar-header pull-right">
-								<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
 							<div id="navbar-collapse" class="navbar-collapse collapse pull-right">
 								<?php
 								if ( has_nav_menu( 'primary' ) ) :
@@ -88,6 +88,18 @@
 			</div>
 		</section>
 	</header>
+	<?php if ( !is_front_page() ) { ?>
+	<!--------------- Breadcrumb ---------------->
+	<section class="breadcrumb-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<?php themetim_breadcrumbs(); ?>
+				</div>
+			</div>
+		</div>
+	</section>
+	<?php } ?>
 	<!-- Search Modal -->
 	<div class="modal fade search-pop" id="search-pop" tabindex="-1" role="dialog" aria-labelledby="request-a-quote">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>

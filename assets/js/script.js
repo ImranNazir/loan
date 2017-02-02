@@ -2,15 +2,19 @@
  ThemeTim
  Version:   1.0
  ********************************************************/
+
+/*******************************************************************************
+ * Sticky Header
+ *******************************************************************************/
 jQuery(function(){
-    var head = jQuery( 'header' ).height();
+    var head = jQuery( '.header' ).height();
     jQuery(window).scroll(function() {
-       /* if (jQuery(this).scrollTop() > head){
-            jQuery('header').addClass("sticky");
+        if (jQuery(this).scrollTop() > head){
+            jQuery('.header').addClass("sticky");
         }
         else{
-            jQuery('header').removeClass("sticky");
-        }*/
+            jQuery('.header').removeClass("sticky");
+        }
     });
     /*******************************************************************************
      * Body Animation
