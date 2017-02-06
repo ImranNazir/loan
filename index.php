@@ -17,17 +17,14 @@ get_header(); ?>
 	<main class="home-page woocommerce">
 		<section class="banner">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12 col-sm-12 col-xs-12 padding-gap-1">
-						<?php
-						if ( is_home() && ! is_front_page() ) : ?>
+				<div class="row"><?php
+					if ( is_home() && ! is_front_page() ) : ?>
+						<div class="col-md-12 col-sm-12 col-xs-12 padding-gap-1">
 							<header class="text-center">
 								<h1 class="page-header screen-reader-text"><?php single_post_title(); ?></h1>
 							</header>
-							<?php
-						endif;
-						?>
-					</div>
+						</div>
+					<?php endif; ?>
 					<?php if (get_theme_mod('blog_sidebar_enable','1') ) : ?>
 					<div class="col-md-9 col-sm-8 col-xs-12 padding-gap-3">
 						<?php else: ?>
@@ -52,10 +49,8 @@ get_header(); ?>
 									the_posts_navigation();
 								endif;
 							else :
-
 								get_template_part( 'template-parts/content', 'none' );
 							endif;
-
 							?>
 						</div>
 						<?php
