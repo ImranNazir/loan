@@ -22,7 +22,7 @@ get_header(); ?>
 							<form role="search" method="get" id="searchform" class="searchform form-inline margin-top-20 margin-null" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 								<div class="">
 									<input type="text" class="form-control" value="<?php echo get_search_query(); ?>" name="s" id="s" />
-									<button type="submit" class="btn btn-default text-uppercase"><?php echo esc_attr_x( 'Search', 'submit button' ); ?></button>
+									<button type="submit" class="btn btn-default text-uppercase"><?php echo esc_attr_x( 'Search', 'themetim' ); ?></button>
 								</div>
 							</form>
 						</div><!-- .page-content -->

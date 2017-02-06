@@ -48,7 +48,7 @@ class Themetim_Testimonial_Widget extends SiteOrigin_Widget {
 						),
 						'testimonial_texteditor' => array(
 							'type' => 'tinymce',
-							'label' => __( '', 'widget-form-fields-text-domain' ),
+							'label' => __( '', 'themetim' ),
 							'default' => '',
 							'rows' => 10,
 							'default_editor' => 'html',

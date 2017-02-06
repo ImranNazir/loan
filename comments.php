@@ -93,19 +93,19 @@ if ( post_password_required() ) {
 		$fields =  array(
 
 			'author' =>
-				'<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
+				'<p class="comment-form-author"><label for="author">' . __( 'Name', 'themetim' ) . '</label> ' .
 				( $req ? '<span class="required">*</span>' : '' ) .
 				'<input id="author" class="form-control margin-bottom-20" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 				'" size="30"' . $aria_req . ' /></p>',
 
 			'email' =>
-				'<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
+				'<p class="comment-form-email"><label for="email">' . __( 'Email', 'themetim' ) . '</label> ' .
 				( $req ? '<span class="required">*</span>' : '' ) .
 				'<input id="email" class="form-control margin-bottom-20" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
 				'" size="30"' . $aria_req . ' /></p>',
 
 			'url' =>
-				'<p class="comment-form-url"><label for="url">' . __( 'Website', 'domainreference' ) . '</label>' .
+				'<p class="comment-form-url"><label for="url">' . __( 'Website', 'themetim' ) . '</label>' .
 				'<input id="url" name="url" class="form-control margin-bottom-20" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
 				'" size="30" /></p>',
 		),

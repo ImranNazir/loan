@@ -87,7 +87,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'header_social', array(
-			'label' => __('Header Social', 'themetidy'),
+			'label' => __('Header Social', 'themetim'),
 			'section' => 'social_settings',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -95,73 +95,89 @@ function themetim_customize_register( $wp_customize ) {
 	/********************* Header Social ************************/
 	$wp_customize->add_setting( 'header_fb', array(
 		'default'           => 'https://www.facebook.com/',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_fb', array(
 		'label' => __( 'Facebook', 'themetim' ),
 		'type' => 'text',
 		'section' => 'social_settings',
+		'description' => __('', 'themetim'),
 		'settings' => 'header_fb'
 	) );
 	$wp_customize->add_setting( 'header_tw', array(
 		'default'           => 'https://twitter.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_tw', array(
 		'label' => __( 'Twitter', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_tw'
 	) );
 	$wp_customize->add_setting( 'header_li', array(
 		'default'           => 'https://linkedin.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_li', array(
 		'label' => __( 'Linkedin', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_li'
 	) );
 	$wp_customize->add_setting( 'header_pint', array(
 		'default'           => 'https://pinterest.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_pint', array(
 		'label' => __( 'Pinterest', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_pint'
 	) );
 	$wp_customize->add_setting( 'header_ins', array(
 		'default'           => 'https://instagram.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_ins', array(
 		'label' => __( 'Instagram', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_ins'
 	) );
 	$wp_customize->add_setting( 'header_dri', array(
 		'default'           => 'https://dribbble.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_dri', array(
 		'label' => __( 'Dribbble', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_dri'
 	) );
 	$wp_customize->add_setting( 'header_plus', array(
 		'default'           => 'https://plus.google.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_plus', array(
 		'label' => __( 'Plus Google', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_plus'
 	) );
 	$wp_customize->add_setting( 'header_you', array(
 		'default'           => 'https://youtube.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'header_you', array(
 		'label' => __( 'YouTube', 'themetim' ),
 		'type' => 'text',
+		'description' => __('', 'themetim'),
 		'section' => 'social_settings',
 		'settings' => 'header_you'
 	) );
@@ -184,6 +200,7 @@ function themetim_customize_register( $wp_customize ) {
 	/********************* Footer Social ************************/
 	$wp_customize->add_setting( 'social_footer_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'social_footer_enable', array(
 		'label' => __( 'Enable Footer Social', 'themetim' ),
@@ -194,6 +211,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'footer_fb', array(
 		'default'           => 'https://www.facebook.com/',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_fb', array(
 		'label' => __( 'Facebook', 'themetim' ),
@@ -203,6 +221,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_tw', array(
 		'default'           => 'https://twitter.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_tw', array(
 		'label' => __( 'Twitter', 'themetim' ),
@@ -212,6 +231,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_li', array(
 		'default'           => 'https://linkedin.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_li', array(
 		'label' => __( 'Linkedin', 'themetim' ),
@@ -221,6 +241,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_pint', array(
 		'default'           => 'https://pinterest.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_pint', array(
 		'label' => __( 'Pinterest', 'themetim' ),
@@ -230,6 +251,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_ins', array(
 		'default'           => 'https://instagram.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_ins', array(
 		'label' => __( 'Instagram', 'themetim' ),
@@ -239,6 +261,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_dri', array(
 		'default'           => 'https://dribbble.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_dri', array(
 		'label' => __( 'Dribbble', 'themetim' ),
@@ -248,6 +271,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_plus', array(
 		'default'           => 'https://plus.google.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_plus', array(
 		'label' => __( 'Plus Google', 'themetim' ),
@@ -257,6 +281,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'footer_you', array(
 		'default'           => 'https://youtube.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'footer_you', array(
 		'label' => __( 'YouTube', 'themetim' ),
@@ -278,11 +303,12 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'header_logo', array(
-			'label' => __('Logo', 'themetidy'),
+			'label' => __('Logo', 'themetim'),
 			'section' => 'title_tagline',
 			'settings' => 'themetim_options[divider]'
 		) )
 	);
+
 	/********************* Logo ************************/
 	$wp_customize->add_setting(
 		'site_logo',
@@ -312,7 +338,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'header_top', array(
-			'label' => __('Header Top', 'themetidy'),
+			'label' => __('Header Top', 'themetim'),
 			'section' => 'title_tagline',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -321,6 +347,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'top_header_tel_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'top_header_tel_enable', array(
 		'label' => __( 'Enable Tel', 'themetim' ),
@@ -332,6 +359,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'top_header_tel', array(
 		'default'           => '880 1916 404543',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'top_header_tel', array(
 		'label' => __( 'Phone Number', 'themetim' ),
@@ -342,6 +370,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'top_header_email_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'top_header_email_enable', array(
 		'label' => __( 'Enable Email Address', 'themetim' ),
@@ -352,6 +381,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'top_header_email', array(
 		'default'           => 'info@youremail.com',
+		'sanitize_callback' => 'esc_url_raw',
 	) );
 	$wp_customize->add_control( 'top_header_account', array(
 		'label' => __( 'Email', 'themetim' ),
@@ -363,6 +393,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'cart_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'cart_enable', array(
 		'label' => __( 'Enable Cart', 'themetim' ),
@@ -374,6 +405,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'bottom_header_search', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'bottom_header_search', array(
 		'label' => __( 'Enable Search', 'themetim' ),
@@ -381,7 +413,6 @@ function themetim_customize_register( $wp_customize ) {
 		'section' => 'title_tagline',
 		'settings' => 'bottom_header_search'
 	) );
-
 
 	/**
 	 * ThemeTim Divider
@@ -393,11 +424,12 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'header_favicon', array(
-			'label' => __('Favicon', 'themetidy'),
+			'label' => __('Favicon', 'themetim'),
 			'section' => 'title_tagline',
 			'settings' => 'themetim_options[divider]'
 		) )
 	);
+
 	/*********************************************
 	 * Footer
 	 *********************************************/
@@ -416,7 +448,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'footer_top', array(
-			'label' => __('Top Footer', 'themetidy'),
+			'label' => __('Top Footer', 'themetim'),
 			'section' => 'footer_settings',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -424,6 +456,7 @@ function themetim_customize_register( $wp_customize ) {
 	/********************* Top Footer ************************/
 	$wp_customize->add_setting( 'social_footer_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'social_footer_enable', array(
 		'label' => __( 'Enable Footer Social', 'themetim' ),
@@ -435,6 +468,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'newsletter_footer_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'newsletter_footer_enable', array(
 		'label' => __( 'Enable Footer Newsletter', 'themetim' ),
@@ -445,6 +479,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'top_footer_newsletter_title', array(
 		'default'           => 'Newsletter',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'top_footer_newsletter_title', array(
 		'label' => __( 'Heading', 'themetim' ),
@@ -455,6 +490,8 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'top_footer_newsletter_url', array(
 		'default'           => 'https://www.yourmailchimpurl.com',
+		'sanitize_callback' => 'esc_url_raw',
+
 	) );
 	$wp_customize->add_control( 'top_footer_newsletter_url', array(
 		'label' => __( 'Mail Chimp URL', 'themetim' ),
@@ -467,6 +504,7 @@ function themetim_customize_register( $wp_customize ) {
 	/********************* Middle Footer ************************/
 	$wp_customize->add_setting( 'middle_footer_text_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'middle_footer_text_enable', array(
 		'label' => __( 'Enable Description', 'themetim' ),
@@ -478,6 +516,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'middle_footer_text_heading', array(
 		'default'           => 'Loan',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'middle_footer_text_heading', array(
 		'label' => __( 'Heading', 'themetim' ),
@@ -486,8 +525,10 @@ function themetim_customize_register( $wp_customize ) {
 		'settings' => 'middle_footer_text_heading',
 		'description'   => __('', 'themetim')
 	) );
+
 	$wp_customize->add_setting( 'middle_footer_text', array(
-		'default'           => 'Our agency was founded with a focus on straight-forward, effective, high-quality websites, with fast delivery; you can get online quickly and easily.',
+		'default'           => '',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'middle_footer_text', array(
 		'label' => __( 'Description', 'themetim' ),
@@ -495,105 +536,6 @@ function themetim_customize_register( $wp_customize ) {
 		'section' => 'footer_settings',
 		'settings' => 'middle_footer_text',
 		'description'   => __('', 'themetim')
-	) );
-
-	$wp_customize->add_setting( 'middle_footer_nav_heading_1', array(
-		'default'           => 'The Service',
-	) );
-	$wp_customize->add_control( 'middle_footer_nav_heading_1', array(
-		'label' => __( 'Heading', 'themetim' ),
-		'type' => 'text',
-		'section' => 'footer_settings',
-		'settings' => 'middle_footer_nav_heading_1',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'middle_footer_nav_1_enable', array(
-		'default'           => '1',
-	) );
-	$wp_customize->add_control( 'middle_footer_nav_1_enable', array(
-		'label' => __( 'Enable Nav 1', 'themetim' ),
-		'type' => 'checkbox',
-		'description'   => __('', 'themetim'),
-		'section' => 'footer_settings',
-		'settings' => 'middle_footer_nav_1_enable'
-	) );
-
-	$wp_customize->add_setting( 'middle_footer_nav_heading_2', array(
-		'default'           => 'OPEN HOURS',
-	) );
-	$wp_customize->add_control( 'middle_footer_nav_heading_2', array(
-		'label' => __( 'Heading', 'themetim' ),
-		'type' => 'text',
-		'section' => 'footer_settings',
-		'settings' => 'middle_footer_nav_heading_2',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'open_hour', array(
-		'default'           => 'Monday 11am-7pm<br/>Tuesday-Friday 10am-5pm<br/>Saturday 11am-7pm<br/>Sunday 10am-6pm',
-	) );
-	$wp_customize->add_control( 'open_hour', array(
-		'label' => __( 'Description', 'themetim' ),
-		'type' => 'textarea',
-		'section' => 'footer_settings',
-		'settings' => 'open_hour',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'middle_footer_nav_2_enable', array(
-		'default'           => '1',
-	) );
-	$wp_customize->add_control( 'middle_footer_nav_2_enable', array(
-		'label' => __( 'Enable Hour', 'themetim' ),
-		'type' => 'checkbox',
-		'description'   => __('', 'themetim'),
-		'section' => 'footer_settings',
-		'settings' => 'middle_footer_nav_2_enable'
-	) );
-
-	/**
-	 * ThemeTim Divider
-	 */
-	$wp_customize->add_setting('themetim_options[divider]', array(
-			'type'              => 'divider_control',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new themetim_divider( $wp_customize, 'footer_bottom', array(
-			'label' => __('Bottom Footer', 'themetidy'),
-			'section' => 'footer_settings',
-			'settings' => 'themetim_options[divider]'
-		) )
-	);
-	/********************* Bottom Footer ************************/
-	$wp_customize->add_setting( 'bottom_footer_copyright_enable', array(
-		'default'           => '1',
-	) );
-	$wp_customize->add_control( 'bottom_footer_copyright_enable', array(
-		'label' => __( 'Enable Copyright', 'themetim' ),
-		'type' => 'checkbox',
-		'description'   => __('', 'themetim'),
-		'section' => 'footer_settings',
-		'settings' => 'bottom_footer_copyright_enable'
-	) );
-	$wp_customize->add_setting( 'bottom_footer_copyright', array(
-		'default'           => '© 2016 ThemeTim. All Rights Reserved.',
-	) );
-	$wp_customize->add_control( 'bottom_footer_copyright', array(
-		'label' => __( 'Text', 'themetim' ),
-		'type' => 'text',
-		'section' => 'footer_settings',
-		'settings' => 'bottom_footer_copyright',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'bottom_footer_nav_enable', array(
-		'default'           => '1',
-	) );
-	$wp_customize->add_control( 'bottom_footer_nav_enable', array(
-		'label' => __( 'Enable Nav', 'themetim' ),
-		'type' => 'checkbox',
-		'description'   => __('', 'themetim'),
-		'section' => 'footer_settings',
-		'settings' => 'bottom_footer_nav_enable'
 	) );
 
 	/*********************************************
@@ -614,13 +556,14 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'blog', array(
-			'label' => __('Blog Section', 'themetidy'),
+			'label' => __('Blog Section', 'themetim'),
 			'section' => 'blog_settings',
 			'settings' => 'themetim_options[divider]'
 		) )
 	);
 	$wp_customize->add_setting( 'blog_sidebar_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'blog_sidebar_enable', array(
 		'label' => __( 'Enable Sidebar', 'themetim' ),
@@ -631,6 +574,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'excerpt_lenght', array(
 		'default'           => '60',
+		'sanitize_callback' => 'absint',
 	) );
 	$wp_customize->add_control( 'excerpt_lenght', array(
 		'type'        => 'number',
@@ -646,6 +590,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'blog_social_sharing_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'blog_social_sharing_enable', array(
 		'label' => __( 'Enable Social Sharing', 'themetim' ),
@@ -673,7 +618,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'shop', array(
-			'label' => __('Widget', 'themetidy'),
+			'label' => __('Widget', 'themetim'),
 			'section' => 'shop_settings',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -681,6 +626,7 @@ function themetim_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'shop_sidebar_enable', array(
 		'default'           => '1',
+		'sanitize_callback' => 'themetim_sanitize_checkbox',
 	) );
 	$wp_customize->add_control( 'shop_sidebar_enable', array(
 		'label' => __( 'Enable Widget', 'themetim' ),
@@ -689,7 +635,6 @@ function themetim_customize_register( $wp_customize ) {
 		'section' => 'shop_settings',
 		'settings' => 'shop_sidebar_enable'
 	) );
-
 
 	/*********************************************
 	 * Color
@@ -776,7 +721,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'header_color', array(
-			'label' => __('Header Color', 'themetidy'),
+			'label' => __('Header Color', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -829,7 +774,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'footer_color', array(
-			'label' => __('Footer Color', 'themetidy'),
+			'label' => __('Footer Color', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -881,7 +826,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'default', array(
-			'label' => __('Default Button', 'themetidy'),
+			'label' => __('Default Button', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -1007,7 +952,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'primary', array(
-			'label' => __('Primary Button', 'themetidy'),
+			'label' => __('Primary Button', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -1131,7 +1076,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'success', array(
-			'label' => __('Primary Button', 'themetidy'),
+			'label' => __('Primary Button', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -1256,7 +1201,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'extracolor', array(
-			'label' => __('Extra Color', 'themetidy'),
+			'label' => __('Extra Color', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -1307,7 +1252,7 @@ function themetim_customize_register( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control( new themetim_divider( $wp_customize, 'extrabg', array(
-			'label' => __('Extra BG', 'themetidy'),
+			'label' => __('Extra BG', 'themetim'),
 			'section' => 'colors',
 			'settings' => 'themetim_options[divider]'
 		) )
@@ -1362,15 +1307,17 @@ function themetim_customize_register( $wp_customize ) {
 		'body_font_family',
 		array(
 			'default' => 'Poppins',
-			'capability'     => 'edit_theme_options'
+			'sanitize_callback'     => 'themetim_sanitize_choices'
 		)
 	);
+
 	$wp_customize->add_control(
 		'body_font_family',
 		array(
 			'type' => 'select',
 			'label' => 'Body Font',
 			'section' => 'typography',
+			'settings'       => 'body_font_family',
 			'choices' => array(
 				'Poppins' => 'Poppins',
 				'Open+Sans' => 'Open Sans',
@@ -1398,8 +1345,10 @@ function themetim_customize_register( $wp_customize ) {
 			),
 		)
 	);
+
 	$wp_customize->add_setting( 'body_font_size', array(
 		'default'           => '14',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'body_font_size', array(
 		'label' => __( 'Font Size', 'themetim' ),
@@ -1410,6 +1359,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting( 'body_font_weight', array(
 		'default'           => '400',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'body_font_weight', array(
 		'label' => __( 'Font Weight', 'themetim' ),
@@ -1420,7 +1370,7 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 	$wp_customize->add_setting('heading_font_family', array(
 		'default'        => 'Poppins',
-		'capability'     => 'edit_theme_options',
+		'sanitize_callback'     => 'themetim_sanitize_choices',
 	));
 	$wp_customize->add_control( 'heading_font_family', array(
 		'label'   => 'Heading Font',
@@ -1454,6 +1404,7 @@ function themetim_customize_register( $wp_customize ) {
 	));
 	$wp_customize->add_setting( 'heading_font_weight', array(
 		'default'           => '700',
+		'sanitize_callback' => 'themetim_sanitize_text',
 	) );
 	$wp_customize->add_control( 'heading_font_weight', array(
 		'label' => __( 'Font Weight', 'themetim' ),
@@ -1462,66 +1413,60 @@ function themetim_customize_register( $wp_customize ) {
 		'settings' => 'heading_font_weight',
 		'description'   => __('', 'themetim')
 	) );
-	/**
-	 * ThemeTim Divider
-	 */
-	$wp_customize->add_setting('themetim_options[divider]', array(
-			'type'              => 'divider_control',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_attr',
-		)
-	);
-	$wp_customize->add_control( new themetim_divider( $wp_customize, 'section_gap', array(
-			'label' => __('Section Gap', 'themetidy'),
-			'section' => 'typography',
-			'settings' => 'themetim_options[divider]'
-		) )
-	);
-
-	$wp_customize->add_setting( 'section_gap_1', array(
-		'default'           => '80',
-	) );
-	$wp_customize->add_control( 'section_gap_1', array(
-		'label' => __( 'Section Gap 1', 'themetim' ),
-		'type' => 'number',
-		'section' => 'typography',
-		'settings' => 'section_gap_1',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'section_gap_2', array(
-		'default'           => '80',
-	) );
-	$wp_customize->add_control( 'section_gap_2', array(
-		'label' => __( 'Section Gap 2', 'themetim' ),
-		'type' => 'number',
-		'section' => 'typography',
-		'settings' => 'section_gap_2',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'section_gap_3', array(
-		'default'           => '50',
-	) );
-	$wp_customize->add_control( 'section_gap_3', array(
-		'label' => __( 'Section Gap 3', 'themetim' ),
-		'type' => 'number',
-		'section' => 'typography',
-		'settings' => 'section_gap_3',
-		'description'   => __('', 'themetim')
-	) );
-	$wp_customize->add_setting( 'section_gap_4', array(
-		'default'           => '50',
-	) );
-	$wp_customize->add_control( 'section_gap_4', array(
-		'label' => __( 'Section Gap 4', 'themetim' ),
-		'type' => 'number',
-		'section' => 'typography',
-		'settings' => 'section_gap_4',
-		'description'   => __('', 'themetim')
-	) );
-
-
 }
 add_action( 'customize_register', 'themetim_customize_register' );
+
+/**
+ * Fonts Family
+ * @param $input
+ * @return string
+ */
+function themetim_sanitize_choices( $input ) {
+	$valid = array(
+		'Poppins' => 'Poppins',
+		'Open+Sans' => 'Open Sans',
+		'Abel' => 'Abel',
+		'Roboto' => 'Roboto',
+		'Cormorant+Garamond' => 'Cormorant Garamond',
+		'Lato' => 'Lato',
+		'Raleway' => 'Raleway',
+		'Oswald' => 'Oswald',
+		'Josefin+Slab' => 'Josefin Slab',
+		'Dosis' => 'Dosis',
+		'Josefin+Sans' => 'Josefin Sans',
+		'Tangerine' => 'Tangerine',
+		'Gidugu' => 'Gidugu',
+		'PT+Sans' => 'PT Sans',
+		'PT+Serif' => 'PT Serif',
+		'Droid+Sans' => 'Droid Sans',
+		'Droid+Serif' => 'Droid Serif',
+		'Titillium+Web' => 'Titillium Web',
+		'Hind' => 'Hind',
+		'Bree+Serif' => 'Bree Serif',
+		'Exo' => 'Exo',
+		'Exo+2' => 'Exo 2',
+		'Play' => 'Play',
+	);
+	if ( array_key_exists( $input, $valid ) ) {
+		return $input;
+	} else {
+		return '';
+	}
+}
+
+/**
+ * Checkbox
+ * @param $input
+ * @return int|string
+ */
+
+function themetim_sanitize_checkbox( $input ) {
+	if ( $input == 1 ) {
+		return 1;
+	} else {
+		return '';
+	}
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
